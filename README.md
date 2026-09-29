@@ -7,7 +7,9 @@ App: https://d3nchyae80v81y.cloudfront.net
 1. Botón "Ingresar con Cognito" → redirige al Hosted UI.
 2. Cognito devuelve el `code` → la app lo canjea por tokens.
 3. Muestra email, sub, grupos y los claims del `id_token` decodificado.
-4. Botón "Cerrar sesión" → limpia la sesión local.
+4. Lista los productos con `GET /api/products` (API Gateway + authorizer JWT,
+   usando el `id_token` como `Bearer`).
+5. Botón "Cerrar sesión" → limpia la sesión local.
 
 ## Paso a paso
 
